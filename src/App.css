@@ -1,6 +1,22 @@
 .App {
   text-align: center;
-  padding: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #ddd;
+}
+
+.container{
+  margin: auto;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding-bottom: 20px;
 }
 
 .App-logo {
