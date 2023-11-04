@@ -3,6 +3,7 @@
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
     grid-gap: 40px; 
     padding: 20px;
+	transition: transform 0.3s ease-in-out;
   
     .image-card:first-child {
       grid-row: span 2;
@@ -10,4 +11,19 @@
     }
   }
   
+.add-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    border: 3px dashed rgb(218, 213, 213);
+    border-radius: 10px;
+    cursor: pointer;
+}
   
+.add-image img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 20px;
+}
