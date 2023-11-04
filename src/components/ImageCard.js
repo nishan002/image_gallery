@@ -60,7 +60,6 @@ function ImageCard({index, id, image, onSelect, moveImage}) {
 	const cardStyles ={
 		border : isOver ? '1px solid gray' : 'none',
 		transform : isOver ? 'translateY(10px)' : 'translateY(0)',
-		transition : 'transform 4s'
 	}
 
 	const dropAreaStyles = {

@@ -21,9 +21,10 @@ function Header ({count, onDelete}) {
                 </div>
             )}
             </div>
-            <div className="delete" onClick={onDelete}>
+            {count > 0 ? (<div className="delete" onClick={onDelete}>
             Delete files
-            </div>
+            </div>) : ('')}
+            
         </div>
     );
 };
