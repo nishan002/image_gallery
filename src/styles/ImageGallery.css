@@ -16,14 +16,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 100%;
     border: 3px dashed rgb(218, 213, 213);
     border-radius: 10px;
     cursor: pointer;
 }
   
 .add-image img {
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 767px) {
+	.image-container {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 15px; /* Adjust the gap between cards as needed */
+	}
+}
+
+@media (max-width: 450px) {
+	.image-gallery {
+		display: block;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.image-card:first-child {
+		grid-row: none;
+		grid-column: none;
+	  }
+
+	.add-image {
+	  width: 80px;
+	  height: 80px;
+	}
+	.add-image p{
+	  font-size: 10px;
+	}
+	.add-image img{
+	  width: 15px;
+	  height: 15px;
+	  margin-bottom: 5px;
+	}
+  }
