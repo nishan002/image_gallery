@@ -3,7 +3,6 @@ import '../styles/ImageGallery.css';
 import ImageCard from './ImageCard';
 import addImage from '../images/add_images.png'
 
-
 function ImageGallery({ images, onImageSelect, setImages }) {
 
     const moveImage = useCallback((dragIndex, hoverIndex) => {
@@ -24,20 +23,20 @@ function ImageGallery({ images, onImageSelect, setImages }) {
 
     return (
         <div className="image-gallery">
-        {images.map((image, index) => (
-            <ImageCard
-            key={image.id}
-            index={index}
-            id={image.id}
-            image={image}
-            onSelect={onImageSelect}
-            moveImage={moveImage}
-            />
-        ))}
-        <div className='add-image'>
-          <img src={addImage} alt="" />
-          <p>Add Images</p>
-        </div>
+            {images.map((image, index) => (
+                <ImageCard
+                key={image.id}
+                index={index}
+                id={image.id}
+                image={image}
+                onSelect={onImageSelect}
+                moveImage={moveImage}
+                />
+            ))}
+            <div className='add-image'>
+                <img src={addImage} alt="" />
+                <p>Add Images</p>
+            </div>
         </div>
     );
 }
