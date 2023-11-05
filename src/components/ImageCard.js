@@ -74,7 +74,8 @@ function ImageCard({index, id, image, onSelect, moveImage}) {
     };
 
   return (
-    <div ref={ref} style={cardStyles} data-handler-id={handlerId} className={`image-card${isSelected ? ' selected' : ''}`}>
+    <div ref={ref} style={{cardStyles, opacity: isSelected ? ".6" : "1", transition: ".2s"}} data-handler-id={handlerId} className={`image-card`}>
+		<div className={ isSelected ? "" : "overlay" }></div>
         <input
         type="checkbox"
         style={{ display: isSelected ? 'block' : 'none' }}
@@ -82,7 +83,7 @@ function ImageCard({index, id, image, onSelect, moveImage}) {
         onChange={handleCheckboxChange}
 		moveImage={moveImage}
         />
-        <img className='image' src={image.url} alt={image.title} style={dropAreaStyles}/>
+        <img className='image' src={image.url} alt={image.title} style={{dropAreaStyles, transition: ".2s"}}/>
     </div>
   );
 }

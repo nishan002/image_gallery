@@ -5,11 +5,12 @@
 	width: 100%;
 	height: 100%;
 	text-align: center;
+	transition: transform 2s;
 }
 
 .image-card{
 	position: relative;
-	transition: transform .5s ease;
+	transition: transform .5s;
 }
 
 .checkbox {
@@ -23,25 +24,11 @@
 	z-index: 333333;
 }
 
-.selected::after {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	padding: 0;
-	margin: 0;
-	background-color: #c5c5c5;
-	opacity: .4;
-	z-index: 3443;
-	border-radius: 10px;
-	transition: .5s;
-	border: 1px solid #ddd;
+.image-card:hover .overlay{
+	opacity: .5;
 }
 
-.image-card:hover::after {
-	content: '';
+.overlay {
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -50,12 +37,12 @@
 	padding: 0;
 	margin: 0;
 	background-color: #565151;
-	opacity: 0.5;
+	opacity: 0;
 	z-index: 3443;
 	border-radius: 10px;
 	border: 1px solid #ddd;
 	cursor: pointer;
-	transition: opacity .5;
+	transition: opacity .2s;
 }
 
 .image-card:hover .checkbox{
