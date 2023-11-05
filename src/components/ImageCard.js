@@ -5,6 +5,8 @@ import '../styles/ImageCard.css';
 
 function ImageCard({index, id, image, onSelect, moveImage}) {
     const [isSelected, setIsSelected] = useState(false);
+	
+	// Image drag and drop handling 
 	const ref = useRef(null);
 
 	const [{ handlerId ,isOver}, drop] = useDrop({
@@ -68,6 +70,7 @@ function ImageCard({index, id, image, onSelect, moveImage}) {
 
 	drag(drop(ref));
 
+	// Checkbox status check whether it is selected or not
     const handleCheckboxChange = () => {
         setIsSelected(!isSelected)
         onSelect(image, !isSelected);
